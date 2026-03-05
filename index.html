@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Weather App</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- External CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center text-white p-4">
+
+<button id="toggleBtn" class="mb-4 bg-white text-black px-4 py-2 rounded-lg font-semibold">
+🌙
+</button>
+
+<h1 class="text-4xl font-bold mb-6">Weather App 🌍</h1>
+
+<div class="w-[400px] bg-white/20 backdrop-blur-lg p-6 rounded-2xl shadow-lg">
+
+<!-- Search -->
+<div class="flex gap-3">
+<input id="searchBox" class="flex-1 px-3 py-2 rounded-lg text-black" placeholder="Enter city"/>
+<button id="searchBtn" class="bg-white text-black px-4 rounded-lg font-bold">
+Search
+</button>
+</div>
+
+<!-- Loading -->
+<p id="loading" class="text-center mt-3 hidden">Loading...</p>
+
+<!-- Weather Info -->
+<div class="text-center mt-6 text-yellow-400">
+<img id="icon" class="w-24 mx-auto"/>
+<h2 id="temp" class="text-4xl font-bold mt-2"></h2>
+<p id="city" class="text-xl font-semibold"></p>
+<p id="feels" class="text-sm mt-1"></p>
+</div>
+
+<!-- Extra Info -->
+<div class="flex justify-between mt-6 text-center">
+
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/728/728093.png" class="w-8 mx-auto"/>
+<p id="humidity" class="font-bold mt-1"></p>
+<p class="text-sm">Humidity</p>
+</div>
+
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/553/553416.png" class="w-8 mx-auto"/>
+<p id="wind" class="font-bold mt-1"></p>
+<p class="text-sm">Wind</p>
+</div>
+
+<div>
+<img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" class="w-8 mx-auto"/>
+<p id="clouds" class="font-bold mt-1"></p>
+<p class="text-sm">Clouds</p>
+</div>
+
+</div>
+
+<!-- Forecast -->
+<div id="forecast" class="mt-6 grid grid-cols-5 gap-2 text-center text-sm"></div>
+
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
