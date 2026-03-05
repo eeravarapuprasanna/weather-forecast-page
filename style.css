@@ -1,0 +1,8 @@
+body{
+  transition: 0.5s ease;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.night{
+  background: linear-gradient(to right, #141E30, #243B55);
+}
